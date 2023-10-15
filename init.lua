@@ -531,5 +531,16 @@ vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, sil
 
 vim.o.autochdir = true
 
+vim.api.nvim_set_keymap('i', '<C-a>', '<Home>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-e>', '<End>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-b>', '<Left>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-f>', '<Right>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-p>', '<Up>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-n>', '<Down>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-d>', '<Del>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-h>', '<BS>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-k>', '<C-u>"_d', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-u>', '<C-g>u<C-u>', { noremap = true, silent = true })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
