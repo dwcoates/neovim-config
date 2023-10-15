@@ -533,6 +533,12 @@ vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, sil
 
 vim.o.autochdir = true
 
+vim.api.nvim_set_keymap('c', '<C-a>', '<Home>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('c', '<C-e>', '<End>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-a>', '<Home>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-e>', '<End>', { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap('i', '<C-a>', '<Home>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-e>', '<End>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-b>', '<Left>', { noremap = true, silent = true })
