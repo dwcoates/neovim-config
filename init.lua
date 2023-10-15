@@ -71,6 +71,11 @@ require('lazy').setup({
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
 
+  {
+    'christoomey/vim-tmux-navigator',
+    event = 'VimEnter',  -- Load on VimEnter event
+  },
+
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
@@ -554,6 +559,11 @@ vim.api.nvim_set_keymap('i', '<C-d>', '<Del>', { noremap = true, silent = true }
 vim.api.nvim_set_keymap('i', '<C-h>', '<BS>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-k>', '<C-u>"_d', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-u>', '<C-g>u<C-u>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('i', '<C-h>', '<cmd> TmuxNavigationLeft<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-l>', '<cmd> TmuxNavigationRight<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-j>', '<cmd> TmuxNavigationDown<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-k>', '<cmd> TmuxNavigationUp<CR>', { noremap = true, silent = true })
 
 -- vim.call('dein#add', 'tpope/vim-surround')
 
