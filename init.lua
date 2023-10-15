@@ -74,6 +74,8 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  {'tpope/vim-surround'},
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -541,6 +543,8 @@ vim.api.nvim_set_keymap('i', '<C-d>', '<Del>', { noremap = true, silent = true }
 vim.api.nvim_set_keymap('i', '<C-h>', '<BS>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-k>', '<C-u>"_d', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-u>', '<C-g>u<C-u>', { noremap = true, silent = true })
+
+-- vim.call('dein#add', 'tpope/vim-surround')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
