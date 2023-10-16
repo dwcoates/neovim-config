@@ -59,6 +59,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
+vim.wo.cursorline = true
+
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
 --
