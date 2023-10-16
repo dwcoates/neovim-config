@@ -302,6 +302,10 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
+    layout_config = {
+      width = 0.7,  -- Set the width of the window to 70% of the editor's width
+      height = 0.5,  -- Set the height of the window to 50% of the editor's height
+    },
   },
 }
 
@@ -316,7 +320,21 @@ vim.keymap.set('n', '<leader>/', function()
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
     winblend = 10,
     previewer = false,
-  })
+
+    -- Layout configuration starts here:
+    layout_config = {
+      width = 0.7,      -- Adjust to set the width as a percentage of the screen width
+      height = 0.5,     -- Adjust to set the height as a percentage of the screen height
+
+      -- Additional configuration for horizontal or vertical strategies if needed:
+      -- horizontal = {
+      --   mirror = false,
+      -- },
+      -- vertical = {
+      --   mirror = false,
+      -- },
+    },
+})
 end, { desc = '[/] Fuzzily search in current buffer' })
 
 vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
