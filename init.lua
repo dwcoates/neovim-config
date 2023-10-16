@@ -82,12 +82,12 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
-  {'tpope/vim-surround'},
-
   {
     'andymass/vim-matchup',
     event = 'VimEnter',  -- Load vim-matchup on VimEnter event
   },
+
+  'machakann/vim-sandwich',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -586,7 +586,7 @@ vim.api.nvim_set_keymap('i', '<C-l>', '<cmd> TmuxNavigationRight<CR>', { noremap
 vim.api.nvim_set_keymap('i', '<C-j>', '<cmd> TmuxNavigationDown<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-k>', '<cmd> TmuxNavigationUp<CR>', { noremap = true, silent = true })
 
--- vim.call('dein#add', 'tpope/vim-surround')
-
+--vim.api.nvim_set_keymap('<leader>sa(', '<Plug>(operator-sandwich-add)<Plug>(sandwich-()', 'v', { noremap = false, silent = true })
+--
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
