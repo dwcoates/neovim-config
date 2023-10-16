@@ -87,6 +87,8 @@ require('lazy').setup({
     event = 'VimEnter',  -- Load vim-matchup on VimEnter event
   },
 
+  'ahmedkhalf/project.nvim',
+
   'machakann/vim-sandwich',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
